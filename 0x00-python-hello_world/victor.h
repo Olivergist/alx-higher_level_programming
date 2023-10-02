@@ -1,7 +1,7 @@
 #ifndef VICTOR_H
 #define VICTOR_H
 
-#include <stddef.h>
+#include <stdlib.h>
 
 /**
  *struct listint_s - define the structure
