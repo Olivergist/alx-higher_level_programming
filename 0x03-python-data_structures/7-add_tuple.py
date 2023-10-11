@@ -5,7 +5,7 @@ def add_tuple(tuple_a=(), tuple_b=()):
         # If tuple_a is empty, pad with (0, 0)
         if len(tuple_a) == 0:
             tuple_a = 0, 0
-        # If tuple_a has only 1 element, pad with a 0 for the second element
+        # If tuple_a has only 1 element
     else:
         tuple_a = tuple_a[0], 0
 
@@ -14,9 +14,9 @@ def add_tuple(tuple_a=(), tuple_b=()):
         # If tuple_b is empty, pad with (0, 0)
         if len(tuple_b) == 0:
             tuple_b = 0, 0
-        # If tuple_b has only 1 element, pad with a 0 for the second element
+        # If tuple_b has only 1 element
     else:
         tuple_b = tuple_b[0], 0
 
-    # Calculate the sum of the first and second elements of the two tuples
+    # Calculate the sum of the first and second elements    
     return (tuple_a[0] + tuple_b[0], tuple_a[1] + tuple_b[1])
