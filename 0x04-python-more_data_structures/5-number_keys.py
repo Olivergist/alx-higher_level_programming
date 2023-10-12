@@ -6,4 +6,4 @@ def number_keys(a_dictionary):
     for i in list_keys:
         star += 1
 
-    return (star)
+    return(star)
