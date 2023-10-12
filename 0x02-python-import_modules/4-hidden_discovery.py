@@ -1,16 +1,18 @@
 #!/usr/bin/python3
 
-# Check if this script is run
+import dis
+import importlib
+
+def print_names(module_name):
+    try:
+        module = importlib.import_module(module_name)
+        names = [name for name in dir(module) if not name.startswith("__")]
+        names.sort()
+        for name in names:
+            print(name)
+    except Exception as e:
+        pass
+
 if __name__ == "__main__":
-    # Import the hidden_4 module
-    import hidden_4
-
-    # Get a list of all names defined
-    names = dir(hidden_4)
-
-# Iterate through each name in the list
-for name in names:
-# Check if the name does not start
-    if name[:2] != "__":
-    # Print the public names
-print(name)
+    module_name = "hidden_4"
+    print_names(module_name)
