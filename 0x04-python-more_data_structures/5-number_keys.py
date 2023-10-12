@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def number_keys(a_dictionary):
-    # Use the len() function to get the number of keys in the dictionary
+    # Use the len() function to get the number
     star = 0
     list_keys =list(a_dictionary.keys())
 
