@@ -13,6 +13,5 @@ def __init__(self, size):
 
     Paremeters:
     Size (int): The size of the square.
-
     """
     self. __size = size
