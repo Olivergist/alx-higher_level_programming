@@ -1,0 +1,67 @@
+Test Script: test_add_integer.txt
+
+Purpose: Test the 'add_integer' function to ensure it correctly adds two integers or floats and handles various input scenarios.
+
+Test Environment Setup: None
+
+Test 1 - Adding Two Positive Integers:
+Test Input:
+- a: 5 (integer)
+- b: 3 (integer)
+Expected Output: 8 (integer)
+Steps:
+1. Call the 'add_integer' function with inputs 5 and 3.
+2. Verify that the result is equal to 8.
+
+Test 2 - Adding a Positive Integer and a Negative Integer:
+Test Input:
+- a: 7 (integer)
+- b: -2 (integer)
+Expected Output: 5 (integer)
+Steps:
+1. Call the 'add_integer' function with inputs 7 and -2.
+2. Verify that the result is equal to 5.
+
+Test 3 - Adding a Positive Integer and a Default Value:
+Test Input:
+- a: 3 (integer)
+- b: (default, 98)
+Expected Output: 101 (integer)
+Steps:
+1. Call the 'add_integer' function with input 3 (a) and the default value of b (98).
+2. Verify that the result is equal to 101.
+
+Test 4 - Adding a Float and an Integer:
+Test Input:
+- a: 15.5 (float)
+- b: 4 (integer)
+Expected Output: 19 (integer)
+Steps:
+1. Call the 'add_integer' function with inputs 15.5 and 4.
+2. Verify that the result is equal to 19.
+
+Test 5 - Handling an Invalid Input (String for 'a'):
+Test Input:
+- a: "Invalid" (string)
+- b: 10 (integer)
+Expected Error: TypeError (a must be an integer or b must be an integer)
+Steps:
+1. Call the 'add_integer' function with input "Invalid" (a) and 10 (b).
+2. Verify that a TypeError is raised with the message "a must be an integer or b must be an integer."
+
+Test 6 - Handling an Invalid Input (None for 'a'):
+Test Input:
+- a: None
+- b: 15.2 (float)
+Expected Error: TypeError (a must be an integer or b must be an integer)
+Steps:
+1. Call the 'add_integer' function with input None (a) and 15.2 (b).
+2. Verify that a TypeError is raised with the message "a must be an integer or b must be an integer."
+
+Test Results:
+- Test 1: Passed
+- Test 2: Passed
+- Test 3: Passed
+- Test 4: Passed
+- Test 5: Passed
+- Test 6: Passed
