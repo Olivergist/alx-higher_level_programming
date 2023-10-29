@@ -4,7 +4,7 @@
 
 
 class Square:
-    """Square with a private attribute"""
+    """Represent a sqaure"""
 
 
 def __init__(self, size):
