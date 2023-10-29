@@ -4,7 +4,7 @@
 
 
 class Square:
-    """Represent a sqaure"""
+    """Represent a Square"""
 
 
 def __init__(self, size):
@@ -14,4 +14,4 @@ def __init__(self, size):
     Paremeters:
     Size (int): The size of the square.
     """
-    self. __size = size
+    self.__size = size
