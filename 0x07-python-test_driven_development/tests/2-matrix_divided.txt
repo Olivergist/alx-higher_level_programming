@@ -1,0 +1,227 @@
+Title: Test Script for matrix_divided Function
+
+Description:
+This test script evaluates the 'matrix_divided' function, which is designed to divide all elements of a matrix by a given number while performing extensive type and size validations. The function should produce a new matrix with the elements divided by the specified number, rounded to two decimal places.
+
+Usage:
+1. Import the 'matrix_divided' function.
+2. Call the function with a matrix (a list of lists) and a division factor (integer or float).
+3. The function will return a new matrix with elements divided by the factor.
+
+Test Cases:
+--------------------------
+
+Test Case 1: Basic Division
+--------------------------
+Matrix:
+[[2, 4, 6],
+ [8, 10, 12]]
+
+Division Factor: 2
+
+Expected Result:
+[[1.0, 2.0, 3.0],
+ [4.0, 5.0, 6.0]]
+
+Explanation:
+Each element in the matrix is divided by 2, resulting in the expected output.
+
+--------------------------
+
+Test Case 2: Division by Float
+--------------------------
+Matrix:
+[[3.5, 7.5],
+ [10.5, 12.75]]
+
+Division Factor: 1.5
+
+Expected Result:
+[[2.33, 5.0],
+ [7.0, 8.5]]
+
+Explanation:
+The matrix elements are divided by 1.5, rounded to two decimal places.
+
+--------------------------
+
+Test Case 3: Invalid Matrix (Not a List)
+--------------------------
+Matrix:
+"Invalid"
+
+Division Factor: 2
+
+Expected Result: TypeError (matrix must be a list of lists of integers/floats)
+
+Explanation:
+The matrix is not a list; the function should raise a TypeError.
+
+--------------------------
+
+Test Case 4: Non-numeric Element in Matrix
+--------------------------
+Matrix:
+[[1, 2, '3'],
+ [4, 5, 6]]
+
+Division Factor: 2
+
+Expected Result: TypeError (matrix must be a list of lists of integers/floats)
+
+Explanation:
+An element ('3') in the matrix is not an integer or float, so the function should raise a TypeError.
+
+--------------------------
+
+Test Case 5: Non-uniform Matrix Rows
+--------------------------
+Matrix:
+[[1, 2, 3],
+ [4, 5, 6],
+ [7, 8]]
+
+Division Factor: 2
+
+Expected Result: TypeError (Each row of the matrix must have the same size)
+
+Explanation:
+The third row has a different size than the first two; the function should raise a TypeError.
+
+--------------------------
+
+Test Case 6: Division by Zero
+--------------------------
+Matrix:
+[[1, 2],
+ [3, 4]]
+
+Division Factor: 0
+
+Expected Result: ZeroDivisionError (division by zero)
+
+Explanation:
+The division factor is 0, which should result in a ZeroDivisionError.
+
+--------------------------
+
+Test Case 7: Usage with Empty Matrix
+--------------------------
+Matrix: []
+
+Division Factor: 5
+
+Expected Result: []
+
+Explanation:
+An empty matrix is provided; the function should return an empty matrix.
+
+--------------------------
+
+Test Case 8: Division by Float with Negative Values
+--------------------------
+Matrix:
+[[-2, -4, -6],
+ [-8, -10, -12]]
+
+Division Factor: 1.5
+
+Expected Result:
+[[-1.33, -2.67, -4.0],
+ [-5.33, -6.67, -8.0]]
+
+Explanation:
+Negative integer elements are divided by 1.5, rounded to two decimal places.
+
+--------------------------
+
+Test Case 9: Division by Float with Zero as Factor
+--------------------------
+Matrix:
+[[1, 2],
+ [3, 4]]
+
+Division Factor: 0.0
+
+Expected Result: ZeroDivisionError (division by zero)
+
+Explanation:
+The division factor is set to 0.0, which should result in a ZeroDivisionError.
+
+--------------------------
+
+Test Case 10: Usage with Empty Sublists
+--------------------------
+Matrix:
+[[], []]
+
+Division Factor: 5
+
+Expected Result: []
+
+Explanation:
+The matrix consists of empty sublists; the function should return an empty matrix.
+
+--------------------------
+
+Test Case 11: Division by a Negative Float Factor
+--------------------------
+Matrix:
+[[5, 10],
+ [15, 20]]
+
+Division Factor: -2.5
+
+Expected Result:
+[[-2.0, -4.0],
+ [-6.0, -8.0]]
+
+Explanation:
+The elements are divided by -2.5, rounded to two decimal places.
+
+--------------------------
+
+Test Case 12: Invalid Division Factor (Not a Number)
+--------------------------
+Matrix:
+[[1, 2],
+ [3, 4]]
+
+Division Factor: "invalid"
+
+Expected Result: TypeError (div must be a number)
+
+Explanation:
+The division factor is not a number; the function should raise a TypeError.
+
+--------------------------
+
+Test Case 13: Division by a Large Float Factor
+--------------------------
+Matrix:
+[[1, 2, 3],
+ [4, 5, 6]]
+
+Division Factor: 1000.5
+
+Expected Result:
+[[0.0, 0.0, 0.0],
+ [0.0, 0.0, 0.0]]
+
+Explanation:
+The division factor is significantly larger than the elements, resulting in a new matrix with all elements equal to 0.0.
+
+--------------------------
+
+Test Case 14: Usage with a Large Matrix
+--------------------------
+Matrix:
+[[1] * 1000] * 1000
+
+Division Factor: 2
+
+Expected Result:
+[[0.5] * 1000] * 1000
+
+Explanation:
+A large matrix with all elements set to 1 is divided by 2,
