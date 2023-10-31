@@ -1,16 +1,16 @@
+#!/usr/bin/python3
+"""This module defines a Rectangle class."""
+
+
 class Rectangle:
     """
-This module defines a Rectangle class.
-"""
-
-    def __init__(self, width=0, height=0):
-        """
     class Rectangle defines a rectangle
 
     Attr:
         width: width of the rectangle
         height: height of the rectangle
     """
+    def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
 
@@ -28,7 +28,6 @@ This module defines a Rectangle class.
 
     @property
     def height(self):
-
         return self.__height
 
     @height.setter
@@ -50,12 +49,7 @@ This module defines a Rectangle class.
     def __str__(self):
         if self.__width == 0 or self.__height == 0:
             return ""
-        rect = []
-        for i in range(self.__height):
-            [rect.append('#') for j in range(self.__width)]
-            if i != self.__height - 1:
-                rect.append("\n")
-        return "".join(rect)
+        return "\n".join(["#" * self.__width] * self.__height)
 
     def __repr__(self):
         return f"Rectangle({self.__width}, {self.__height})"
