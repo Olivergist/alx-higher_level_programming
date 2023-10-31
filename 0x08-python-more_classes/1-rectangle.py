@@ -37,12 +37,12 @@ class Rectangle:
         Decorator for the height
         Returns: height
         """
-        return self.__width
+        return self.__height
 
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
-            raise TypeError("height ,ust be an integer")
+            raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
