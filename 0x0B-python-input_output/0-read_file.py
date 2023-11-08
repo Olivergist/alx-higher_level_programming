@@ -1,14 +1,12 @@
 #!/usr/bin/python3
-"""This module defines a function to read a text
-  file and print its content to stdout.
-"""
+"""Function to read text file and print to stdout"""
 
 
 def read_file(filename=""):
-    """Read the specified text file and print its content to stdout."""
-    try:
-        with open(filename, encoding='utf-8') as file:
-            for line in file:
-                print(line, end='')
-    except FileNotFoundError:
-        pass
+    """Read text file and print to stdout
+    Use with statement to open file
+    No need to manage file permissions or exceptions
+    Not allowed to import modules
+    """
+    with open(filename, encoding="utf-8") as f:
+        print(f.read(), end="")
