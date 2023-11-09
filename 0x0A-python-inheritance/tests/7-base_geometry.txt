@@ -1,0 +1,61 @@
+==================================
+The `7-base_geometry` module
+==================================
+
+Using `BaseGeometry`
+---------------------
+
+Import the class:
+
+from 7-base_geometry import BaseGeometry
+
+Create an instance:
+
+bg = BaseGeometry()
+
+Call area() method:
+
+bg.area()
+
+Output:
+Exception: area() is not implemented
+
+Validate integers: 
+
+bg.integer_validator("age", 12)
+
+bg.integer_validator("width", 89)
+
+Invalid input:
+
+bg.integer_validator("age", 0)
+
+Output: 
+ValueError: age must be greater than 0
+
+bg.integer_validator("distance", -4)
+
+Output:
+ValueError: distance must be greater than 0 
+
+Invalid types:
+
+bg.integer_validator("age", "12")
+
+Output:
+TypeError: age must be an integer
+
+Conclusion:
+
+The BaseGeometry class implements the required 
+area() and integer_validator() methods and 
+raises correct exceptions for invalid inputs.
+
+The area() method raises the exception stating
+it is not implemented. 
+
+The integer_validator() method validates that 
+the input is an integer > 0 and raises custom 
+exceptions with messages.
+
+Overall the class behaves as expected.
